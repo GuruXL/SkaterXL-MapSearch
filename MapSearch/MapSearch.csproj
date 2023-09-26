@@ -123,11 +123,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Patches\MenuInputFieldDialogPatch.cs" />
-    <Compile Include="MenuController.cs" />
-    <Compile Include="Utils\SearchFilter.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="Main.cs" />
+    <Compile Include="MapSearch.Patches\LevelSelectionControllerPatch.cs" />
+    <Compile Include="MapSearch.Patches\MenuInputFieldDialogPatch.cs" />
+    <Compile Include="MapSearch\MenuController.cs" />
+    <Compile Include="MapSearch.Utils\SearchFilter.cs" />
+    <Compile Include="MapSearch\Settings.cs" />
+    <Compile Include="MapSearch\Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

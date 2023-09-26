@@ -2,6 +2,7 @@
 using System.Reflection;
 using UnityEngine;
 using UnityModManagerNet;
+using MapSearch.Utils;
 using ModIO.UI;
 
 namespace MapSearch

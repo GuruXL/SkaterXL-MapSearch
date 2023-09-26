@@ -2,7 +2,7 @@
 using UnityEngine;
 using GameManagement;
 
-namespace MapSearch.patches
+namespace MapSearch.Patches
 {
     public static class MenuInputFieldDialogPatch
     {

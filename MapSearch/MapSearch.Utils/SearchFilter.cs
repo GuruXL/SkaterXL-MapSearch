@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MapSearch
+namespace MapSearch.Utils
 {
     public class SearchFilter : MonoBehaviour
     {
-        public static SearchFilter Instance { get; private set; }
+        // public static SearchFilter __instance { get; private set; }
+        // public static SearchFilter Instance => __instance ?? (__instance = new SearchFilter());
 
         private List<LevelInfo> LevelList;
         private List<LevelInfo> ModLevelList;

@@ -15,13 +15,13 @@ namespace MapSearch
 
         //bool showMainMenu = false;
 
-        public void Start()
+        private void Start()
         {
             InputManager = GameStateMachine.Instance.GetComponent<InputDialogManager>();
             levelController = GameStateMachine.Instance.LevelSelectionObject.GetComponent<LevelSelectionController>();
         }
 
-        public void Update()
+        private void Update()
         {
             if (GameStateMachine.Instance?.CurrentState?.GetType() == typeof(LevelSelectionState))
             {
@@ -44,9 +44,10 @@ namespace MapSearch
             }
         }
 
-        void CheckInput()
+        private void CheckInput()
         {
             Player player = PlayerController.Instance.inputController.player;
+
             //if (GameStateMachine.Instance.MainPlayer.input.GetButtonDown("X")) // 1.2.6.0
             if (player.GetButtonDown("X"))
             {
@@ -61,7 +62,7 @@ namespace MapSearch
             }
         }
 
-        void UpdateSearchString()
+        private void UpdateSearchString()
         {
             if (PopUpInput.inputField.text != Main.settings.searchString)
             {
@@ -86,7 +87,7 @@ namespace MapSearch
             }
         }
 
-        public void FilterMaps()
+        private void FilterMaps()
         {
             for (int i = 0; i < levelController.listView.ItemViews.Count; i++)
             {
@@ -106,10 +107,10 @@ namespace MapSearch
         {
             if (levelController != null)
             {
-
-                levelController.UpdateList();
-
-                /*
+                //LevelManager.Instance.FetchCustomMaps();
+                //levelController.UpdateList();
+                //levelController.listView.UpdateList();
+                
                 for (int i = 0; i < levelController.listView.ItemViews.Count; i++)
                 {
                     if (levelController.listView.ItemViews[i].gameObject.activeSelf == false)
@@ -117,7 +118,6 @@ namespace MapSearch
                         levelController.listView.ItemViews[i].gameObject.SetActive(true);
                     }
                 }
-                */
 
                 isResetMapsExecuted = true;
             }
